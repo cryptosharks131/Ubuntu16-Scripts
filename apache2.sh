@@ -4,7 +4,7 @@ echo -e "Updating the system and installing basic dependencies."
 sudo apt -y update >/dev/null 2>&1
 sudo apt -y upgrade >/dev/null 2>&1
 sudo apt-get -y install build-essential libtool autotools-dev autoconf pkg-config libssl-dev apache2 >/dev/null 2>&1
-sudo apt-get -y install libboost-all-dev git npm nodejs nodejs-legacy libminiupnpc-dev redis-server >/dev/null 2>&1
+sudo apt-get -y install libboost-all-dev zip git npm nodejs nodejs-legacy libminiupnpc-dev redis-server >/dev/null 2>&1
 sudo add-apt-repository -y ppa:bitcoin/bitcoin >/dev/null 2>&1
 sudo apt-get -y update >/dev/null 2>&1
 sudo apt-get -y install libdb4.8-dev libdb4.8++-dev >/dev/null 2>&1
