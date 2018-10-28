@@ -19,10 +19,10 @@ sudo fallocate -l 4G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
-  cat << EOF > /etc/sysctl.conf
+  cat << EOF >> /etc/sysctl.conf
 vm.swappiness=10
 EOF
-  cat << EOF > /etc/fstab
+  cat << EOF >> /etc/fstab
 /swapfile none swap sw 0 0
 EOF
 echo -e "Completed adding 4GB of swap space."
