@@ -26,3 +26,14 @@ EOF
 /swapfile none swap sw 0 0
 EOF
 echo -e "Completed adding 4GB of swap space."
+
+
+echo -e "Setting up firewall."
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
+sudo ufw allow ssh/tcp
+sudo ufw limit ssh/tcp
+sudo ufw allow 'Apache Full'
+sudo ufw logging on
+yes "y" | sudo ufw enable
+echo -e "Completed setting up firewall."
