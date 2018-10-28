@@ -83,7 +83,9 @@ EOF
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 EOF
-sudo a2ensite /etc/apache2/sites-available/wbs.conf >/dev/null 2>&1
+cd /etc/apache2/sites-available/
+sudo a2ensite wbs.conf >/dev/null 2>&1
 service apache2 reload >/dev/null 2>&1
+cd
 echo -e "Completed setting up apache server."
 echo -e "Apache server set up in directory /var/www/wbs/"
