@@ -85,6 +85,7 @@ EOF
 EOF
 cd /etc/apache2/sites-available/
 sudo a2ensite wbs.conf >/dev/null 2>&1
+sudo rm 000-default.conf >/dev/null 2>&1
 service apache2 reload >/dev/null 2>&1
 cd
 echo -e "Completed setting up apache server."
