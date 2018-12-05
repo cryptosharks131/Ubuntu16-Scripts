@@ -2,7 +2,7 @@ clear
 
 echo -e "Updating the system and installing basic dependencies."
 sudo apt-get -y install build-essential libtool autotools-dev autoconf pkg-config libssl-dev apache2 >/dev/null 2>&1
-sudo apt-get -y install libboost-all-dev zip git libminiupnpc-dev mysql-server python-setuptools python-dev python-pip >/dev/null 2>&1
+sudo apt-get -y install libboost-all-dev zip git libminiupnpc-dev python-setuptools python-dev python-pip >/dev/null 2>&1
 sudo add-apt-repository -y ppa:bitcoin/bitcoin >/dev/null 2>&1
 sudo apt-get -y update >/dev/null 2>&1
 sudo apt-get -y install libdb4.8-dev libdb4.8++-dev >/dev/null 2>&1
@@ -10,7 +10,6 @@ sudo apt-get -y install fail2ban >/dev/null 2>&1
 sudo systemctl enable fail2ban >/dev/null 2>&1
 sudo systemctl start fail2ban >/dev/null 2>&1
 echo -e "Completed updating the system and installing basic dependencies."
-
 
 echo -e "Adding 4GB of swap space."
 sudo fallocate -l 4G /swapfile >/dev/null 2>&1
