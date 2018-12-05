@@ -2,7 +2,7 @@ clear
 
 echo -e "Updating the system and installing basic dependencies."
 sudo apt-get -y install build-essential libtool autotools-dev autoconf pkg-config libssl-dev apache2 >/dev/null 2>&1
-sudo apt-get -y install libboost-all-dev zip git npm libminiupnpc-dev mysql-server python-setuptools python-dev python-pip >/dev/null 2>&1
+sudo apt-get -y install libboost-all-dev zip git libminiupnpc-dev mysql-server python-setuptools python-dev python-pip >/dev/null 2>&1
 sudo add-apt-repository -y ppa:bitcoin/bitcoin >/dev/null 2>&1
 sudo apt-get -y update >/dev/null 2>&1
 sudo apt-get -y install libdb4.8-dev libdb4.8++-dev >/dev/null 2>&1
